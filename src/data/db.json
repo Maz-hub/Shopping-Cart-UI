@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "VelocityX Runner",
+      "description": "Lightweight and breathable running shoes designed for speed and comfort. Perfect for daily training and road runs.",
+      "price": 89.99,
+      "quantity": 20,
+      "category": "Running Shoes",
+      "rating": 4.7,
+      "image": "images/Running_shoes_product_1.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "AeroSprint 3000",
+      "description": "High-performance sneakers engineered with cushioned midsoles for superior shock absorption and durability.",
+      "price": 94.99,
+      "quantity": 18,
+      "category": "Running Shoes",
+      "rating": 4.8,
+      "image": "images/Running_shoes_product_2.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "GlideFlow Max",
+      "description": "Breathable mesh upper with flexible traction sole — ideal for long-distance running and marathon preparation.",
+      "price": 102.5,
+      "quantity": 15,
+      "category": "Running Shoes",
+      "rating": 4.9,
+      "image": "images/Running_shoes_product_3.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "NeonStrike Pro",
+      "description": "Dynamic energy-return design with reflective details for night runs. Combines bold style with advanced stability.",
+      "price": 99.99,
+      "quantity": 25,
+      "category": "Running Shoes",
+      "rating": 4.6,
+      "image": "images/Running_shoes_product_4.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Crimson Pace",
+      "description": "Engineered mesh upper with precision-fit lacing system. Delivers high responsiveness and comfort on every stride.",
+      "price": 84.99,
+      "quantity": 30,
+      "category": "Running Shoes",
+      "rating": 4.5,
+      "image": "images/Running_shoes_product_5.jpeg"
+    },
+    {
+      "id": 6,
+      "name": "Peach Glide",
+      "description": "Soft pastel running shoes combining style and performance. Lightweight EVA sole keeps you fast and supported.",
+      "price": 79.99,
+      "quantity": 28,
+      "category": "Running Shoes",
+      "rating": 4.4,
+      "image": "images/Running_shoes_product_6.jpeg"
+    }
+  ]
+}
