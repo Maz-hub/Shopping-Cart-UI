@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
 
 /**
  * ProductContext
@@ -53,8 +53,7 @@ export function ProductProvider({ children }) {
     fetchProducts();
   }, []); // Empty dependency array ensures this runs only once
 
-
-   /**
+  /**
    * Provides product data and state management to child components.
    * Any component wrapped by ProductProvider can access these values
    * using the useContext(ProductContext) hook.
@@ -65,4 +64,18 @@ export function ProductProvider({ children }) {
       {children}
     </ProductContext.Provider>
   );
+}
+
+/**
+ * Custom hook: useProducts
+ * Simplifies access to the ProductContext.
+ * Enables components to consume product-related data
+ * without importing both useContext and ProductContext explicitly.
+ *
+ * Example:
+ * const { products, loading, error } = useProducts();
+ */
+
+export function useProducts() {
+  return useContext(ProductContext);
 }

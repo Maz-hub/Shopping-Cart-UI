@@ -1,9 +1,8 @@
 import ProductCard from "./ProductCard";
-import { useContext } from "react";
-import { ProductContext } from "../context/ProductContext";
+import { useProducts } from "../context/ProductContext";
 
 const ProductList = () => {
-  const { products, loading, error } = useContext(ProductContext);
+  const { products, loading, error } = useProducts();
   return (
     <>
       {/* Product grid layout with responsive breakpoints */}
