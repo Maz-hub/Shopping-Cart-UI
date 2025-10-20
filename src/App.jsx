@@ -16,7 +16,7 @@ const App = () => {
     const fetchProducts = async () => {
       try {
         // Send request to local API (json-server)
-        const response = await fetch("http://localhost:8000/products");
+        const response = await fetch("/api/products");
 
         // Handle unsuccessful HTTP responses
         if (!response.ok) throw new Error("Failed to fetch products");
