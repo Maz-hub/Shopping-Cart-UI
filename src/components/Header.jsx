@@ -14,8 +14,8 @@ const Header = () => {
   /** @state Controls visibility of the cart dropdown. */
   const [showDropdown, setShowDropdown] = useState(false);
 
-  /** @context Retrieve cart state from CartContext. */
-  const { cart } = useCart();
+  /** @context Retrieve cart state and removeFromCart action from CartContext. */
+  const { cart, removeFromCart } = useCart();
 
   /**
    * Compute total number of items in the cart.
@@ -76,6 +76,15 @@ const Header = () => {
                             {item.qty} x ${item.price}
                           </p>
                         </div>
+                        {/* Remove button
+                        - Calls removeFromCart() when clicked, passing the product's unique ID.
+                        - Removes the corresponding item from global cart state. */}
+                        <button
+                          onClick={() => removeFromCart(item.id)}
+                          className="text-sm text-red-500 hover:underline"
+                        >
+                          Remove
+                        </button>
                       </li>
                     ))}
                   </ul>
