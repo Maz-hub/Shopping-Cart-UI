@@ -1,11 +1,26 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 
 export const CartContext = createContext();
 
 export function CartProvider({ children }) {
-  // State: holds the current list of products in the cart
-  // Initially, it's an empty array because the cart starts empty
-  const [cart, setCart] = useState([]);
+  /**
+   * State: holds the current list of products in the cart.
+   * Initializes by checking localStorage to persist the cart across reloads.
+   * If saved data exists, parse and return it; otherwise, start with an empty array.
+   */
+  const [cart, setCart] = useState(() => {
+    const stored = localStorage.getItem("cart");
+    return stored ? JSON.parse(stored) : [];
+  });
+
+  /**
+   * Effect: syncs cart state with localStorage whenever the cart changes.
+   * Converts the cart array to a JSON string before saving.
+   * Ensures that items remain in the cart after page refresh or reload.
+   */
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   /**
    * Function: addToCart
