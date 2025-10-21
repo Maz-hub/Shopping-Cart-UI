@@ -1,25 +1,73 @@
-## 🛠️ Current Progress
+## 🛍️ Shopping Cart UI — RunLab
 
-The project is currently set up with a functional React front end and a local JSON Server API for product data.  
-The goal is to build a complete shopping cart UI from scratch while following a guided learning process.
-
-### Implemented Features
-
-- **Project setup** using Vite and React.  
-- **Data fetching** with the Fetch API inside a `useEffect` hook to retrieve product information from a mock backend (`json-server`).  
-- **State management** implemented with `useState` for `products`, `loading`, and `error` states.  
-- **Error handling** using a `try...catch` block, with visual feedback for loading and failed requests.  
-- **Responsive product grid** built with Tailwind CSS utility classes.  
-- **Dynamic rendering** of product cards displaying image, name, description, and price.  
-- **Clean component structure** with clear separation of logic (data fetching) and presentation (UI).  
-
-### Technical Stack
-
-- **React 18** — for building the user interface  
-- **Vite** — for fast development environment and build optimization  
-- **Tailwind CSS v4** — for styling and responsive layout  
-- **JSON Server** — for simulating a REST API locally  
+A responsive **React shopping cart interface** for a mock sneaker store called **RunLab**.
+This project demonstrates structured React component design, context-based state management, and data persistence using `localStorage`.
 
 ---
 
-> _This stage focuses on setting up a solid foundation: fetching and displaying products, managing states, and ensuring the UI adapts well across devices. The next phase will involve implementing cart logic, interactivity, and state persistence._
+## 🚀 Overview
+
+The project is a full-featured **shopping cart UI** connected to a mock API (`json-server`).  
+Users can browse running shoes, add them to the cart, view a live dropdown summary, remove specific items, or clear the entire cart — with cart data persisting across page reloads.
+
+---
+
+## ✨ Implemented Features
+
+### 🧩 Core Features
+- **React + Vite Setup** — optimized modern development environment.  
+- **Product fetching** via the Fetch API inside a `useEffect` hook.  
+- **Local JSON Server API** serving product data dynamically.  
+- **State management** for products, loading, and errors using `useState`.  
+- **Global state handling** for cart items with **Context API + custom hooks**.  
+- **Persistent cart state** stored in `localStorage` for session continuity.
+
+### 🛒 Cart Functionality
+- **Add to Cart** — adds items or increments quantity if already present.  
+- **Remove from Cart** — deletes individual items via context action.  
+- **Clear Cart** — resets all cart contents with a single click.  
+- **Cart Dropdown UI** — toggleable cart summary showing:  
+  - item name, quantity, and line total  
+  - running subtotal of all items  
+  - "Clear Cart" button  
+- **Cart badge indicator** — dynamically displays total number of items.
+
+### 🎨 User Interface
+- **Responsive layout** using Tailwind CSS v4 utility classes.  
+- **Accessible UI patterns** with keyboard-friendly buttons and visual feedback.  
+- **Iconography** using `react-icons` (`FaShoppingCart`).  
+- **Clean component structure** with clear separation of logic and presentation.
+
+---
+
+## 🧠 Technical Stack
+
+| Tool / Library | Purpose |
+|----------------|----------|
+| **React 18** | Component-based UI development |
+| **Vite** | Fast build and dev environment |
+| **Tailwind CSS v4** | Utility-first styling framework |
+| **JSON Server** | Local REST API for product data |
+| **React Context API** | Global state management for cart |
+| **localStorage** | Data persistence across sessions |
+| **React Icons** | Vector icons for UI consistency |
+
+---
+
+## 🧾 Key Learnings
+
+- Using **Context API** to replace prop drilling.  
+- Creating **custom hooks** for cleaner data access (`useProducts`, `useCart`).  
+- Managing **immutable updates** to state (e.g., `.map()` and `.filter()`).  
+- Handling **side effects** like fetching data and persisting to storage.  
+- Structuring a scalable React project with **modular components**.  
+
+
+---
+
+## 🙏 Acknowledgments
+
+This project was created as part of a guided learning by  
+[@bradtraversy](https://github.com/bradtraversy)’s *Modern React from the Beginning* course.  
+
+
