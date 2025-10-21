@@ -64,11 +64,19 @@ export function CartProvider({ children }) {
   };
 
   /**
+   * clearCart
+   * Empties the entire cart by resetting the cart state to an empty array.
+   */
+  const clearCart = () => setCart([]);
+
+  /**
    * Provide cart state and actions to all components wrapped
    * inside the CartProvider.
    */
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, clearCart }}
+    >
       {children}
     </CartContext.Provider>
   );

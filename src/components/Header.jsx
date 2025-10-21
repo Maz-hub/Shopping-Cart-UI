@@ -14,8 +14,9 @@ const Header = () => {
   /** @state Controls visibility of the cart dropdown. */
   const [showDropdown, setShowDropdown] = useState(false);
 
-  /** @context Retrieve cart state and removeFromCart action from CartContext. */
-  const { cart, removeFromCart } = useCart();
+  /** @context Retrieve cart state and actions from CartContext,
+   * including removeFromCart and clearCart for full cart management. */
+  const { cart, removeFromCart, clearCart } = useCart();
 
   /**
    * Compute total number of items in the cart.
@@ -93,6 +94,16 @@ const Header = () => {
                     <span>Total: </span>
                     <span>${totalCount}</span>
                   </div>
+
+                  {/* Clear Cart Items 
+                  - Triggers clearCart() to remove all items from the cart at once.
+                  */}
+                  <button
+                    onClick={clearCart}
+                    className="mt-4 w-full bg-blue-900 text-white py-1 rounded transition hover:bg-blue-950"
+                  >
+                    Clear Cart
+                  </button>
                 </>
               )}
             </div>
